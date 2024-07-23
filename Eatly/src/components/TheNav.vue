@@ -188,7 +188,7 @@ div.bm-menu {
     height: 100%; 
     width: 0; 
     position: fixed; 
-    z-index: 1000; 
+    z-index: 910; 
     top: 0;
     left: 0;
     background-color: rgb(255, 255, 255); 
@@ -199,6 +199,7 @@ div.bm-menu {
 
 div.bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+    z-index: 910; 
 }
 .bm-item-list {
     color: #b8b7ad;
@@ -342,7 +343,7 @@ div.bm-item-list > * > span {
         height: 100%; 
         width: 0; 
         position: fixed; 
-        z-index: 1000; 
+        z-index: 910; 
         top: 0;
         left: 0;
         background-color: rgb(255, 255, 255); 
@@ -353,6 +354,7 @@ div.bm-item-list > * > span {
   
     div.bm-overlay {
         background: rgba(0, 0, 0, 0.3);
+        z-index: 900;
     }
     .bm-item-list {
         color: #b8b7ad;
