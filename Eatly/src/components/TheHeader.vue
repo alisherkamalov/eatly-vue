@@ -142,7 +142,7 @@ export default {
 }
 .hero-image {
     width: 332.92px;
-    height: 288.14px;
+    height: 298.14px;
     position: relative;
     margin-top: 40px;
 }
