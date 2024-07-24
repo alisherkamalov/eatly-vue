@@ -331,7 +331,7 @@ export default {
     }
     .hero-container {
         width: 100%;
-        height: 500px;
+        height: 25%;
         justify-content: center;
         flex-wrap: wrap;
         display: flex;
