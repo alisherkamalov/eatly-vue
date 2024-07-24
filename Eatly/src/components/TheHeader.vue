@@ -193,7 +193,7 @@ export default {
     width: 332.92px;
     height: 288.14px;
     position: relative;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 .line-and-herotext {
     display: flex;
@@ -478,8 +478,8 @@ export default {
     .hero-image {
         width: 680.48px;
         height: 607px;
-        min-width: 332.92px;
-        min-height: 288.14px;
+        min-width: 692.92px;
+        min-height: 298.14px;
         margin-top: 0px;
     }
 }
