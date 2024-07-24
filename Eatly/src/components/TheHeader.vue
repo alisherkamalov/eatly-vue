@@ -366,7 +366,7 @@ export default {
     
     .hero-text {
         width: 403.2px;
-        height: 350.38px;
+        height: 425.38px;
         justify-content: center;
         display: block;
     }
