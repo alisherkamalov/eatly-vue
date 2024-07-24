@@ -5,7 +5,7 @@
             <div class="left-bar">
                 <div class="logo-center">
                     <div class="logo">
-                        <img src="../assets/logo.png" alt="" class="img-logo">
+                        <img src="/logo.png" alt="" class="img-logo">
                         <div class="text-logo">
                             <h1><RouterLink class="text-logo-h1" to="/">Eatly</RouterLink></h1>
                         </div>
@@ -31,14 +31,14 @@
             <div class="nav-bar-mobile">
                 <div class="logo-center">
                     <div class="logo">
-                        <img src="../assets/logo.png" alt="" class="img-logo">
+                        <img src="/logo.png" alt="" class="img-logo">
                         <div class="text-logo">
                             <h1><RouterLink class="text-logo-h1" to="/">Eatly</RouterLink></h1>
                         </div>
                     </div>
                 </div>
-                <Slide :isOpen="isOpen" @closeMenu="isOpen = false">
-                    <img src="../assets/logo.png" />
+                <Slide :isOpen="isOpen" @closeMenu="isOpen = false" noOverlay width="200">
+                    <img src="/logo.png" />
                     <h1 v-for="(navigation, index) in navigations" :key="index"><router-link :to="navigation.route" class="mob">{{navigation.text}}</router-link></h1>
                 </Slide>
             </div>
@@ -188,8 +188,9 @@ div.bm-menu {
     height: 100%; 
     width: 0; 
     position: fixed; 
-    z-index: 910; 
+    z-index: 1000; 
     top: 0;
+    box-shadow: 15px 15px 345px 0.1px black;
     left: 0;
     background-color: rgb(255, 255, 255); 
     overflow-x: hidden; 
@@ -199,7 +200,6 @@ div.bm-menu {
 
 div.bm-overlay {
     background: rgba(0, 0, 0, 0.3);
-    z-index: 910; 
 }
 .bm-item-list {
     color: #b8b7ad;
@@ -342,8 +342,8 @@ div.bm-item-list > * > span {
     div.bm-menu {
         height: 100%; 
         width: 0; 
+        max-width: 352px;
         position: fixed; 
-        z-index: 910; 
         top: 0;
         left: 0;
         background-color: rgb(255, 255, 255); 
@@ -354,7 +354,6 @@ div.bm-item-list > * > span {
   
     div.bm-overlay {
         background: rgba(0, 0, 0, 0.3);
-        z-index: 900;
     }
     .bm-item-list {
         color: #b8b7ad;

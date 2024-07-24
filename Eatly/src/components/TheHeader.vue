@@ -25,10 +25,25 @@
                         {{ herobutton.text }}
                     </button>
                 </div>
+                <div class="trust-reviews">
+                    <div 
+                    class="trust-review" 
+                    v-for="(trust,index) in trusts" :key="index"
+                    :style="{
+                        width: trust.width,
+                        height: trust.height,
+                        marginLeft: '15px',
+                        marginTop: trust.mt
+                    }"
+                    >
+                        <img :src="trust.image" alt="images trust">
+                    </div>
+                    <h1 class="h1-trust">4900+</h1>
+                </div>
                 
             </div>
             <div class="hero-img">
-                <img src="../assets/hero.png" alt="" class="hero-image">
+                <img src="/hero.png" alt="" class="hero-image">
             </div>
         </div>
     </header>
@@ -88,12 +103,46 @@ export default {
                     border: '1.5px solid #6C5FBC',
                     width: '110px'
                 }
+            ],
+            trusts: [
+                {
+                    width: '123px',
+                    height: '30.2px',
+                    mt: '0px',
+                    image: '/trust.png'
+                },
+                {   
+                    width: '95.79px',
+                    height: '15.28px',
+                    mt: '6px',
+                    image: '/stars.png'
+                },
+                
             ]
         }
     }
 }
 </script>
 <style>
+.trust-reviews {
+    display: flex;
+    width: 301px;
+    height: 31px;
+    justify-content: center;
+    align-items: center;
+    top: 35px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.h1-trust {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #334155;
+    font-size: 16px;
+    font-weight: 500;
+
+
+}
 .hero-button {
     width: 156px;
     height: 59px;
@@ -142,7 +191,7 @@ export default {
 }
 .hero-image {
     width: 332.92px;
-    height: 298.14px;
+    height: 288.14px;
     position: relative;
     margin-top: 40px;
 }
@@ -190,7 +239,7 @@ export default {
     }
     .hero-text {
         width: 332.92px;
-        height: 192px;
+        height: 305px;
         padding-top: 50px;
         justify-content: center;
         display:flex;
@@ -239,13 +288,14 @@ export default {
     
     .hero-img {
         width: 332.92px;
-        height: 288.14px;
+        height: 298.14px;
+        
         position: relative;
     }
     .hero-image {
         width: 332.92px;
-        height: 288.14px;
-        position: relative;
+        height: 298.14px;
+        position: absolute;
     }
     .line-and-herotext {
         display: flex;
@@ -316,7 +366,7 @@ export default {
     
     .hero-text {
         width: 403.2px;
-        height: 199.38px;
+        height: 350.38px;
         justify-content: center;
         display: block;
     }
