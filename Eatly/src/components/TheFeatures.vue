@@ -42,7 +42,7 @@
                     </h1>
                     <div class="w-64 h-auto flex px-25 text-center content-center">
                         <h1 class="textl2-3">
-                            Reliable Customer Support We Provide Great Experiences
+                            Reliable Customer Support We Provide Great Experiences
                         </h1>
                     </div>
                 </li>

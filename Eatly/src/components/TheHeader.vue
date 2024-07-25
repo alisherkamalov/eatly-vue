@@ -221,7 +221,7 @@ export default {
 @media (max-width:640px) {
     .hero-container {
         width: 100%;
-        height: 600px;
+        height: 25%;
         justify-content: center;
         flex-wrap: wrap;
         display: flex;
@@ -366,13 +366,14 @@ export default {
     
     .hero-text {
         width: 403.2px;
-        height: 425.38px;
+        height: 350.38px;
         justify-content: center;
         display: block;
     }
     .hero-img {
         width: 483.9px;
         height: 431.65px;
+        margin-top: 55px;
     }
     .hero-image {
         width: 483.9px;
@@ -394,6 +395,16 @@ export default {
 
 
 
+    }
+}
+@media(min-width:700px) {
+    .hero-container {
+        height: 900px;
+    }
+}
+@media (min-width:900px) {
+    .hero-container {
+        height: 550px;
     }
 }
 
