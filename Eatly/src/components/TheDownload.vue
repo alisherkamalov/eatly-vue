@@ -1,28 +1,37 @@
 <template>
     <div class="thedownload">
-        <div class="rootdownload">
-            <div class="img-mob">
-                <img src="/mobile.png" class="img-mobile"/>
+        <div class="flex-download">
+            <div class="rootdownload">
+                <div class="img-mob">
+                    <img src="/mobile.png" class="img-mobile"/>
+                </div>
+                <div class="side-text-root">
+                    <div class="side-text">
+                        <h1 class="side-text1">Premium <span class="side-textspan" >Quality</span> For Your Health</h1>
+                        <h1 
+                        class="side-text2" 
+                        v-for="(text,index) in texts"
+                        :key="index"
+                        :style="{left:text.mg,
+                            position:text.pos
+                        }"
+                        >{{text.text}}</h1>
+                        <div class="download-div">
+                            <button class="download-button">Download -></button>
+                            <img src="/v14.svg" class="image-download" alt="line download">
+                        </div>
+                    </div>  
+                </div>
+                
             </div>
-            <div class="side-text-root">
-                <div class="side-text">
-                    <h1 class="side-text1">Premium <span class="side-textspan" >Quality</span> For Your Health</h1>
-                    <h1 
-                    class="side-text2" 
-                    v-for="(text,index) in texts"
-                    :key="index"
-                    :style="{left:text.mg,
-                        position:text.pos
-                    }"
-                    >{{text.text}}</h1>
-                    <div class="download-div">
-                        <button class="download-button">Download -></button>
-                        <img src="/v14.svg" class="image-download" alt="line download">
-                    </div>
-                </div>  
-            </div>
-            
         </div>
+        <div class="line-download-overflow">
+            <div class="line-download">
+
+            </div>
+        </div>
+        
+        
     </div>
 </template>
 
@@ -48,6 +57,32 @@ export default {
 </script>
 
 <style>
+.line-download {
+    width: 100%;
+    min-width: 314px;
+    height: 0.5px;
+    top: 25px;
+    background-color: #CBCBCB;
+    left: 1px;
+    gap: 0px;
+    padding-left: 96px;
+    padding-right: 96px;
+    border: 1px solid #CBCBCB;
+    display: flex;
+    position: relative;
+
+
+}
+
+.line-download-overflow {
+    display: flex;
+    max-width: 6248px;
+    min-width: 314px;
+    height: 30px;
+    padding-left: 97px;
+    padding-right: 97px;
+    
+}
 .download-button {
     background-color: #6C5FBC;
     width: 186px;
@@ -79,12 +114,19 @@ export default {
 .thedownload {
     width: 100%;
     height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+.flex-download {
+    width: 100%;
+    height: 800px;
     padding-top: 97px;
     padding-left: 127px;
     padding-right: 127px;
     padding-bottom: 97px;
     display: flex;
     justify-content: center;
+
 }
 .side-text1 {
     font-family: 'Poppins';
@@ -151,7 +193,7 @@ export default {
         max-width: 1300px;
         min-width: 0px;
         height: 1000px;
-        display: flex;
+        display: flex;  
         padding-bottom: 75px;
         justify-content: space-between;
     }
@@ -159,13 +201,24 @@ export default {
         padding-left: 0px;
     }
     .thedownload {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .flex-download {
         padding-left: 17px;
         padding-right: 17px;
     }
 }
 @media (max-width:900px) {
-    .thedownload {
-        height: 1200px;
+    .line-download-overflow {
+        height: 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .flex-download {
+        height: 1300px;
     }
     .rootdownload {
         max-width: 1300px;
@@ -182,14 +235,24 @@ export default {
     .thedownload {
         padding-left: 17px;
         padding-right: 17px;
+        height: 1400px;
         
     }
 }
-@media (max-width:600px) {
+@media (max-width:700px) {
+    .line-download-overflow {
+        min-width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 5px;
+    }
+    .line-download {
+        min-width: 100%;
+    }
     .rootdownload {
         max-width: 1300px;
         min-width: 0px;
-        height: 700px;
+        height: 750px;
         display: flex;
         padding-top: 75px;
         flex-direction: column-reverse;
@@ -197,6 +260,15 @@ export default {
     }
     .thedownload {
         height: 700px;
+        display: flex;
+        padding: 0;
+        overflow: hidden;
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+    .flex-download {
+        padding: 0;
+        height: 650px;
         display: flex;
         flex-direction: column;
         align-items: center;
