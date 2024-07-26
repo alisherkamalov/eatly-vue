@@ -201,18 +201,20 @@ export default {
     flex-direction: column;
     align-items: center;
 }
-@media (min-width:916px) {
-
-}
-@media (max-width:915px) {
+@media (min-width:701px) {
     .resturent-cont {
-        width: 281.6px;
+        width: 401.6px;
     }
     .resturent-root {
         width: 750.6px;
     }
+    .b-i-r-c-right {
+        right: 10px;
+        bottom: 10px;
+    }
 }
 @media (max-width:700px) {
+    
     .resturent-cont {
         width: 315px;
     }
@@ -237,6 +239,15 @@ export default {
         height: 1200px;
         justify-content: center;
         padding-top: 50px;
+    }
+}
+
+@media (min-width:1101px) {
+    .resturent-cont {
+        width: 1001.6px;
+    }
+    .resturent-root {
+        width: 1050.6px;
     }
 }
 </style>
