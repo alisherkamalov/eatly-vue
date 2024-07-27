@@ -91,7 +91,12 @@ export default {
     color: white;
     font-family: 'Inter';
     transition: all 0.5s ease;
+    border: 1.5px solid #6C5FBC;
 
+}
+.download-button:hover {
+    color: #6C5FBC;
+    background-color: white;
 }
 .image-download {
     position: absolute;

@@ -19,7 +19,7 @@
             </div>
             <div class="right-bar">
                 <div class="buttons-nav">
-                    <button v-for="(navbutton, index) in navbuttons" :key="index" class="nav-button" :style="{width: navbutton.width, color: navbutton.color, backgroundColor: navbutton.bgcolor}"><h1 class="navbtn-text">{{navbutton.text}}</h1></button>
+                    <button v-for="(navbutton, index) in navbuttons" :key="index" class="nav-button" :style="{width: navbutton.width}"><h1 class="navbtn-text">{{navbutton.text}}</h1></button>
                 </div>
             </div>
         </div>
@@ -80,14 +80,10 @@ export default {
                 {   
                     width: '102.49px',
                     text: 'Login',
-                    color: 'black',
-                    bgcolor: 'transparent'
                 },
                 {
                     width: '131.49px',
                     text: 'Sign Up',
-                    color: 'white',
-                    bgcolor: '#6C5FBC'
                 },
             ]
         }
@@ -157,6 +153,7 @@ div.bm-burger-button {
     text-decoration: none;
     color: #6C5FBC;
     font-family: "Poppins", sans-serif;
+    width: 300px;
 }
 
 div.bm-burger-bars {
@@ -207,6 +204,7 @@ div.bm-overlay {
     top: -40px;
     margin-left: 10%;
     font-size: 20px;
+    width: 300px;
 }
 div.bm-item-list > * {
     display: flex;
@@ -313,6 +311,7 @@ div.bm-item-list > * > span {
         text-decoration: none;
         color: #6C5FBC;
         font-family: "Poppins", sans-serif;
+        width: 300px;
     }
     
     div.bm-burger-bars {
@@ -361,6 +360,7 @@ div.bm-item-list > * > span {
         top: -40px;
         margin-left: 10%;
         font-size: 20px;
+        width: 300px;
     }
     div.bm-item-list > * {
         display: flex;
@@ -418,6 +418,12 @@ div.bm-item-list > * > span {
     .router {
         text-decoration: none;
         color: #606060;
+        transition: all 0.3s ease;
+        background-color: transparent;
+    }
+    .router:hover {
+        color: #6C5FBC;
+        background-color: transparent;
     }
     .nav-line-mob {
         display: none;
@@ -448,11 +454,18 @@ div.bm-item-list > * > span {
         gap: 11.14px;
         border-radius: 17.83px;
         transition: all 0.5s ease;
+        color: #6C5FBC;
+        background-color: white;
+        border: 1.5px solid #6C5FBC;
     
     
     }
     .nav-button:active {
         scale: 0.9;
+    }
+    .nav-button:hover {
+        background-color: #6C5FBC;
+        color: white;
     }
     .navbtn-text {
         font-family: 'Inter';
@@ -533,6 +546,7 @@ div.bm-item-list > * > span {
         display: flex;
         flex-direction: row;
         position: relative;
+        background-color: transparent;
         top: 5px;
     }
     .text-nav2 {
@@ -543,7 +557,12 @@ div.bm-item-list > * > span {
         line-height: 26.74px;
         text-align: left;
         margin-right: 40px;
+        background-color: transparent;
+        transition: all 0.5s ease;
     
+    }
+    .text-nav2:hover {
+        translate: 0px -5px;
     }
     .left-bar {
         display: flex;

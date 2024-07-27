@@ -36,6 +36,13 @@
                     </div>
                 </div>  
             </div>
+            <div class="bottom-rest">
+                <h1 class="b-r-text">View All -></h1>
+            </div>
+        </div>
+        <div class="nav-line-overflow">
+            <div class="nav-line">
+            </div>
         </div>
     </div>
 </template>
@@ -78,12 +85,60 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
+.nav-line {
+    width: 100%;
+    min-width: 916px;
+    height: 3px;
+    top: -75px;
+    background-color: #CBCBCB;
+    left: 1px;
+    gap: 0px;
+    padding-left: 96px;
+    padding-right: 96px;
+    border: 1px 0px 0px 0px;
+    display: flex;
+    position: relative;
+
+
+}
+.nav-line-overflow {
+    display: flex;
+    max-width: 100%;
+    min-width: 916px;
+    height: 30px;
+    
+}
 .bottom-i-r-c {
     display: flex;
     gap: 5px;
     width: 100%;
     justify-content: space-between;
+}
+.b-r-text {
+    color: #ACADB9;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 45.18px;
+    letter-spacing: -0.10000000149011612px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.b-r-text:hover {
+    color: #6C5FBC;
+    translate: 0 -5px;
+}
+.bottom-rest {
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    padding-right: 20px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    top:-20px;
 }
 .b-i-r-c-left {
     display: flex;
@@ -175,7 +230,7 @@ export default {
     color: black;
 }
 .span-rest {
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-size: 45px;
     font-weight: 600;
     line-height: 25.56px;
@@ -185,8 +240,9 @@ export default {
 }
 .rest-root {
     width: 100%;
-    height: 641px;
+    height: 741px;
     display: flex;
+    flex-direction: column;
     padding-left: 96px;
     padding-right: 96px;
     justify-content: center;
@@ -194,14 +250,23 @@ export default {
     padding-top: 150px;
 }
 .rest-content {
-    max-width: 1248.95px;
+    max-width: 100%;
     min-width: 300px;
     display: flex;
-    gap: 100px;
+    gap: 50px;
+    height: 800px;
     flex-direction: column;
     align-items: center;
 }
 @media (min-width:701px) {
+    .rest-root {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .bottom-rest {
+        padding-right: 200px;
+    }
+
     .resturent-cont {
         width: 401.6px;
     }
@@ -212,15 +277,34 @@ export default {
         right: 10px;
         bottom: 10px;
     }
+    .nav-line-overflow {
+        min-width: 500px;
+        padding-left: 96px;
+        padding-right: 96px;
+    }
+    .nav-line {
+        padding-left: 96px;
+        padding-right: 96px;
+        min-width: 500px;
+    }
 }
 @media (max-width:700px) {
-    
+    .nav-line {
+        padding-left: 0px;
+        padding-right: 0px;
+        top: -15px;
+    }
     .resturent-cont {
         width: 315px;
     }
     .text-rest {
         height: 50px;
         line-height: 50px;
+        width: 300px;
+    }
+    .bottom-rest {
+        padding-right: 350px;
+        top: -80px;
     }
     .resturent-root {
         flex-direction: column;
@@ -233,16 +317,23 @@ export default {
     .rest-content {
         min-width: 315px;
         padding-left: 0px;
+        height: 1200px;
         padding-right: 0px;
+        gap:100px;
     }
     .rest-root {
-        height: 1200px;
+        height: 1300px;
         justify-content: center;
         padding-top: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
 @media (min-width:1101px) {
+    .bottom-rest {
+        padding-right: 20px;
+    }
     .resturent-cont {
         width: 1001.6px;
     }

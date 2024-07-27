@@ -16,8 +16,6 @@
                 <div class="herobuttons">
                     <button class="hero-button" v-for="(herobutton,index) in herobuttons" :key="index"
                     :style="{
-                        backgroundColor: herobutton.bgcolor,
-                        color: herobutton.color,
                         border: herobutton.border,
                         width: herobutton.width
                     }"
@@ -91,15 +89,12 @@ export default {
             herobuttons: [
                 { 
                     text: 'Get Started' ,
-                    bgcolor: '#6C5FBC',
-                    color: 'white',
                     border: '0px solid transparent',
+                    border: '1.5px solid #6C5FBC',
                     width: '156px'
                 },
                 { 
                     text: 'Go Pro',
-                    bgcolor: 'white',
-                    color: '#6C5FBC',
                     border: '1.5px solid #6C5FBC',
                     width: '110px'
                 }
@@ -151,11 +146,17 @@ export default {
     cursor: pointer;
     margin-right: 15px;
     transition: all 0.5s ease;
+    background-color: #6C5FBC;
+    color: white;
 
 
 }
 .hero-button:active {
     scale: 0.9;
+}
+.hero-button:hover {
+    background-color: white;
+    color: #6C5FBC;
 }
 .hero-container {
     width: 100%;
@@ -219,6 +220,10 @@ export default {
 
 }
 @media (max-width:640px) {
+    .hero-button:hover {
+        background-color: white;
+        color: #6C5FBC;
+    }
     .hero-container {
         width: 100%;
         height: 25%;
@@ -322,7 +327,12 @@ export default {
     
     }
 }
+
 @media (min-width:641px)  {
+    .hero-button:hover {
+        background-color: white;
+        color: #6C5FBC;
+    }
     .herotext1mob {
         display: none;
     }
@@ -398,17 +408,31 @@ export default {
     }
 }
 @media(min-width:700px) {
+    .hero-button:hover {
+        background-color: white;
+        color: #6C5FBC;
+    }
+
     .hero-container {
         height: 900px;
     }
 }
 @media (min-width:900px) {
+    .hero-button:hover {
+        background-color: white;
+        color: #6C5FBC;
+    }
+
     .hero-container {
-        height: 550px;
+        height: 850px;
     }
 }
 
 @media (min-width:1086px) {
+    .hero-button:hover {
+        background-color: white;
+        color: #6C5FBC;
+    }
     .herotext1mob {
         display: none;
     }
