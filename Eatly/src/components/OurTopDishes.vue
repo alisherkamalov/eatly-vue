@@ -3,7 +3,7 @@
         <div class="dishes">
             <h1 class="dishes-text">Our Top <span class="dishes-span">Dishes</span></h1>
             <div class="foods">
-                <div class="foods-cont" v-for="(food,index) in foods" :key="index">
+                <div :class="food.class" v-for="(food,index) in foods" :key="index">
                     <img src="/heart.png" class="heart-image"/>
                     <img :src="food.image" class="food-img" 
                     :style="{
@@ -73,6 +73,7 @@ export default {
                     margin: '0px',
                     price1: '$12',
                     price2: '.99',
+                    class: 'foods-cont'
                 },
                 {
                     text:'Swe Dish',
@@ -86,6 +87,7 @@ export default {
                     margin: '21px',
                     price1: '$19',
                     price2: '.99',
+                    class: 'foods-cont'
                 },
                 {
                     text:'Swe Dish',
@@ -99,6 +101,7 @@ export default {
                     margin: '21px',
                     price1: '$19',
                     price2: '.99',
+                    class: 'foods-cont'
                 },
                 {
                     text:'Chicken Hell',
@@ -112,6 +115,7 @@ export default {
                     margin: '0px',
                     price1: '$12',
                     price2: '.99',
+                    class: 'foods-cont4'
                 },
                 {
                     text:'Swe Dish',
@@ -125,6 +129,7 @@ export default {
                     margin: '21px',
                     price1: '$19',
                     price2: '.99',
+                    class: 'foods-cont5'
                 },
 
 
@@ -140,12 +145,14 @@ export default {
     height: 150px;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: -60px;
 }
 .bottom-dishes {
     width: 300px;
     height: 150px;
     display: flex;
-
+    padding-right: 150px;
     align-items: flex-start;
     justify-content: flex-end;
     position: relative;
@@ -292,6 +299,37 @@ export default {
     translate: 0 -15px;
     box-shadow: 6.85px 82.18px 41.09px 0px #E5E5E5B2;
 }
+.foods-cont5 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 224.63px;
+    height: 390.36px;
+    padding-top: 25px;
+    border-radius: 34.58px;
+    border: 1.44px solid #F4F4F6;
+    transition: all 0.5s ease;
+}
+.foods-cont5:hover {
+    translate: 0 -15px;
+    box-shadow: 6.85px 82.18px 41.09px 0px #E5E5E5B2;
+}
+.foods-cont4 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 224.63px;
+    height: 390.36px;
+    padding-top: 25px;
+    border-radius: 34.58px;
+    border: 1.44px solid #F4F4F6;
+    transition: all 0.5s ease;
+}
+.foods-cont4:hover {
+    translate: 0 -15px;
+    box-shadow: 6.85px 82.18px 41.09px 0px #E5E5E5B2;
+}
+
 .root-dishes {
     width: 100%;
     height: 800px;
@@ -334,9 +372,24 @@ export default {
 
 }
 @media (min-width: 901px) {
+    .center-b-d {
+            top: -60px;
+            height: 100px;
+        
+    }
     .foods-cont {
         width: 159.74px;
         height: 357.59px;
+    }
+    .foods-cont5 {
+        width: 159.74px;
+        height: 357.59px;
+        display: flex;
+    }
+    .foods-cont4 {
+        width: 159.74px;
+        height: 357.59px;
+        display: flex;
     }
     .price-dish {
         left: 15px;
@@ -351,7 +404,7 @@ export default {
         margin-top: 25px;
     }
     .root-dishes {
-        height: 500px;
+        height: 550px;
     }
     .bottom-dishes {
         width: 1000px;
@@ -364,9 +417,23 @@ export default {
     }
 }
 @media(max-width:900px) {
+    .center-b-d {
+        top: -60px;
+        height: 100px;
+    }
     .foods-cont {
         width: 159.74px;
         height: 357.59px;
+    }
+    .foods-cont5 {
+        width: 159.74px;
+        height: 357.59px;
+        display: none;
+    }
+    .foods-cont4 {
+        width: 159.74px;
+        height: 357.59px;
+        display: none;
     }
     .price-dish {
         left: 15px;
@@ -385,15 +452,12 @@ export default {
         margin-top: 40px;
     }
     .root-dishes {
-        height: 550px;
+        height: 600px;
     }
     .dishes-text {
         text-align: center;
         width: 200px;
         line-height: 50px;
-    }
-    .root-dishes {
-        height: 550px;
     }
     .bottom-dishes {
         width: 1000px;
@@ -408,9 +472,23 @@ export default {
 
 }
 @media (max-width: 600px) {
+    .center-b-d {
+        top: -60px;
+        height: 120px;
+    }
     .foods-cont {
         width: 159.74px;
         height: 357.59px;
+    }
+    .foods-cont5 {
+        width: 159.74px;
+        height: 357.59px;
+        display: none;
+    }
+    .foods-cont4 {
+        width: 159.74px;
+        height: 357.59px;
+        display: flex;
     }
     .price-dish {
         left: 15px;
@@ -437,7 +515,7 @@ export default {
         line-height: 50px;
     }
     .root-dishes {
-        height: 900px;
+        height: 1000px;
     }
     .nav-line-overflow {
         padding-left: 0px;
@@ -445,9 +523,23 @@ export default {
     }
 }
 @media (min-width: 1186px) {
+    .foods {
+        flex-wrap: nowrap;
+        height: 900px;
+    }
     .foods-cont {
         width: 224.63px;
         height: 426.36px;
+    }
+    .foods-cont5 {
+        width: 224.63px;
+        height: 426.36px;
+        display: flex;
+    }
+    .foods-cont4 {
+        width: 224.63px;
+        height: 426.36px;
+        display: flex;
     }
     .price-dish {
         left: 15px;
@@ -461,17 +553,18 @@ export default {
         height: 208.19px;
     }
     .root-dishes {
-        height: 600px;
+        height: 650px;
     }
     .bottom-dishes {
-        width: 1000px;
+        width: 1100px;
+        padding-right: 0px;
     }
     .nav-line-overflow {
         padding-left: 96px;
         padding-right: 96px;
     }
-    .bottom-dishes {
-        padding: 0;
+    .center-b-d {
+        top: -60px;
     }
 
 

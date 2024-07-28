@@ -424,7 +424,7 @@ export default {
     }
 
     .hero-container {
-        height: 850px;
+        height: 550px;
     }
 }
 
